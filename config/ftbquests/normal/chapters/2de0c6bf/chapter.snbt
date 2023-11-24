@@ -1,0 +1,7 @@
+{
+	title: "冒险第二章",
+	icon: "netherex:rime_crystal",
+	always_invisible: false,
+	group: -505965087,
+	default_quest_shape: ""
+}

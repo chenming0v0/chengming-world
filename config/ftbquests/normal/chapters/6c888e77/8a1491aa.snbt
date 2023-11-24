@@ -1,0 +1,22 @@
+{
+	title: "万恶之源:工作台",
+	x: -0.5d,
+	y: 0.0d,
+	description: "其实不是很想那么快给你的",
+	dependencies: [
+		"22cc5c6f"
+	],
+	tasks: [{
+		uid: "a3a82ff6",
+		type: "item",
+		items: [{
+			item: "minecraft:crafting_table"
+		}]
+	}],
+	rewards: [{
+		uid: "56eb662c",
+		type: "item",
+		item: "minecraft:log",
+		count: 16
+	}]
+}
