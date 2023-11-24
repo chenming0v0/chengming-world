@@ -1,0 +1,27 @@
+{
+  "weight": 400,
+  "type": "tconevo:tool",
+  "name": "土块之剑",
+  "lore": [
+    "你相信25倍伤害吗?",
+    "我很佩服第一个用土块词条的人",
+    "说不定吧boss杀完了都没出25倍伤害呢",
+    "土块,待你抛弃普通词条之身后,伤害一定很高",
+    "boss最后都是要击杀的啊!",
+    "最后再说一次,25倍伤害要开始启动了!"
+  ],
+  "tool": "katana",
+  "materials": [
+    "tic_diamond",
+    "tic_glass_shards",
+    "tic_emerald",
+    "tic_gold_ingot"
+  ],
+  "free_mods": 2,
+  "mods": [
+    {
+      "id": "haste",
+      "level": 250
+    }
+  ]
+}

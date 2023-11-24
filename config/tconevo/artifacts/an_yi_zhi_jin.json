@@ -1,0 +1,26 @@
+{
+  "weight": 400,
+  "type": "tconevo:tool",
+  "name": "BUG枪(安逸之枪?)",
+  "lore": [
+  "某位科技高人制作的激光枪?!",
+  "本物品用于致敬可能无限期退坑的安逸菌",
+  "(名为“BUG枪”是因为在《谜一样的e2e多模组生存Ep12 bug激光枪》这一集提到的匠魂工具)",
+  "(虽然有些许改动)"
+  ],
+  "tool": "laser_gun",
+  "materials": [
+    "tic_crystalshard",
+    "gelid_enderium",
+    "refinedglowstone",
+    "manyullyn"
+  ],
+  "free_mods": 2,
+  "mods": [
+    {
+      "id": "haste",
+      "level": 150
+    },
+    "diamond"
+  ]
+}

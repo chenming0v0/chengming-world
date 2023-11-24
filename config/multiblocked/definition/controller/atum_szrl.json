@@ -1,0 +1,139 @@
+{
+  "version": 2,
+  "location": "atum:szrl",
+  "traits": {
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "x": 64,
+      "y": 76,
+      "width": 42,
+      "height": 16,
+      "texture": "multiblocked:textures/work_progress_szrl.png",
+      "fillDirection": 0
+    },
+    "fuel_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "x": 43,
+      "y": 77,
+      "width": 25,
+      "height": 14,
+      "texture": "multiblocked:textures/fuel_progress_szrl.png",
+      "fillDirection": 3
+    },
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "x": 47,
+        "y": 93,
+        "autoIO": false,
+        "valid": [
+          "\"{id:\\\"minecraft:lava_bucket\\\",Count:1b,Damage:0s}\""
+        ]
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "x": 47,
+        "y": 55,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "mIO": 1,
+        "x": 110,
+        "y": 72,
+        "autoIO": false
+      }
+    ],
+    "background": "multiblocked:textures/szrl.png"
+  },
+  "properties": {
+    "rotationState": "NON_Y_AXIS",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 2.2,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 1,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:godforge_side",
+        "frontTexture": "multiblocked:godforge_front",
+        "backTexture": "multiblocked:godforge_top",
+        "upTexture": "multiblocked:godforge_top",
+        "type": "gregtech"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "renderer": {
+        "baseTexture": "multiblocked:godforge_side",
+        "frontTexture": "multiblocked:godforge_front_on_ra",
+        "backTexture": "multiblocked:godforge_top",
+        "upTexture": "multiblocked:godforge_top",
+        "type": "gregtech"
+      },
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "recipe_szrl",
+  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}",
+  "consumeCatalyst": "NOT_CONSUMED",
+  "noNeedController": false,
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "@"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "controller": {
+        "location": "atum:szrl",
+        "type": "component"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

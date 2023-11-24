@@ -1,0 +1,14 @@
+{
+	x: -10.0d,
+	y: 2.0d,
+	dependencies: [
+		"c4b4a90e"
+	],
+	tasks: [{
+		uid: "7ddd29f4",
+		type: "item",
+		items: [{
+			item: "minecraft:nether_star"
+		}]
+	}]
+}

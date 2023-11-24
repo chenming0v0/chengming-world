@@ -1,0 +1,25 @@
+{
+  "name": "recipe_szrl",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/fuel_progress_szrl.png",
+  "recipes": [],
+  "fuelRecipes": [
+    {
+      "uid": "96de9547-d468-4769-a62d-159c93a6f31d",
+      "duration": 202,
+      "inputs": {
+        "item": [
+          {
+            "chance": 1.0,
+            "content": {
+              "amount": 1,
+              "matches": [
+                "{id:\"minecraft:lava_bucket\",Count:1,Damage:0s}"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

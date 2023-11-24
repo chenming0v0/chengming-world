@@ -1,0 +1,16 @@
+{
+	x: -4.0d,
+	y: -1.0d,
+	shape: "diamond",
+	hide_dependency_lines: true,
+	dependencies: [
+		"caad2380"
+	],
+	tasks: [{
+		uid: "02ed4061",
+		type: "item",
+		items: [{
+			item: "contenttweaker:nebu_ore"
+		}]
+	}]
+}

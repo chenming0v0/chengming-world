@@ -1,0 +1,361 @@
+{
+  "version": 2,
+  "location": "chengming:rhjt",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "modelLocation": "multiblocked:moonlightforge",
+        "type": "imodel"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "recipe_rhjt",
+  "catalyst": "{id:\"theaurorian:queenschipper\",Count:1,Damage:0s}",
+  "consumeCatalyst": "CONSUME_DURABILITY",
+  "noNeedController": false,
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "           ",
+        "    AAA    ",
+        "     A     ",
+        "     A     ",
+        "   BBABB   ",
+        "   ACACA   ",
+        "    DAE    ",
+        "     F     "
+      ],
+      [
+        "  AGAAAGA  ",
+        " A       A ",
+        " A       A ",
+        " A       A ",
+        " AB     BA ",
+        "  A     A  ",
+        "           ",
+        "           "
+      ],
+      [
+        " AAHBBBHAA ",
+        "           ",
+        "           ",
+        "           ",
+        " B       B ",
+        " A       A ",
+        "           ",
+        "           "
+      ],
+      [
+        " GHBIIIBHG ",
+        "           ",
+        "           ",
+        "           ",
+        "B         B",
+        "A         A",
+        "           ",
+        "           "
+      ],
+      [
+        " ABIAAAIBA ",
+        "A         A",
+        "           ",
+        "           ",
+        "B         B",
+        "C         C",
+        "J         J",
+        "           "
+      ],
+      [
+        " ABIAIAIBA ",
+        "A  K @ L  A",
+        "A         A",
+        "A         A",
+        "A         A",
+        "A         A",
+        "A         A",
+        "F         F"
+      ],
+      [
+        " ABIAAAIBA ",
+        "A         A",
+        "           ",
+        "           ",
+        "B         B",
+        "C         C",
+        "M         M",
+        "           "
+      ],
+      [
+        " GHBIIIBHG ",
+        "           ",
+        "           ",
+        "           ",
+        "B         B",
+        "A         A",
+        "           ",
+        "           "
+      ],
+      [
+        " AAHBBBHAA ",
+        "           ",
+        "           ",
+        "           ",
+        " B       B ",
+        " A       A ",
+        "           ",
+        "           "
+      ],
+      [
+        "  AGAAAGA  ",
+        " A       A ",
+        " A       A ",
+        " A       A ",
+        " AB     BA ",
+        "  A     A  ",
+        "           ",
+        "           "
+      ],
+      [
+        "           ",
+        "    AAA    ",
+        "     A     ",
+        "     A     ",
+        "   BBABB   ",
+        "   ACACA   ",
+        "    DAE    ",
+        "     F     "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "theaurorian:moontemplebrickssmooth",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "chengming:rhjt",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "theaurorian:aurorianglass",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "theaurorian:auroriansteelblock",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "F": {
+        "states": [
+          {
+            "id": "twilightforest:block_storage",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      },
+      "G": {
+        "states": [
+          {
+            "id": "theaurorian:ceruleanblock",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "H": {
+        "states": [
+          {
+            "id": "theaurorian:moontemplebricks",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "I": {
+        "states": [
+          {
+            "id": "theaurorian:moongem",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "K": {
+        "states": [
+          {
+            "id": "ironchest:iron_chest",
+            "meta": 5
+          }
+        ],
+        "type": "states",
+        "io": "IN"
+      },
+      "L": {
+        "states": [
+          {
+            "id": "ironchest:iron_chest",
+            "meta": 2
+          }
+        ],
+        "type": "states",
+        "io": "OUT"
+      },
+      "any": {
+        "type": "any"
+      },
+      "n": {
+        "capability": "item",
+        "type": "capability",
+        "io": "IN"
+      },
+      "out": {
+        "capability": "item",
+        "type": "capability",
+        "io": "OUT"
+      },
+      "SHUIJING": {
+        "blocks": [
+          {
+            "id": "ebwizardry:crystal_block"
+          }
+        ],
+        "type": "blocks"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "SHUIJING"
+      ],
+      "E": [
+        "SHUIJING"
+      ],
+      "F": [
+        "F"
+      ],
+      "G": [
+        "G"
+      ],
+      "H": [
+        "H"
+      ],
+      "I": [
+        "I"
+      ],
+      "J": [
+        "SHUIJING"
+      ],
+      "K": [
+        "K",
+        "n"
+      ],
+      "L": [
+        "L",
+        "out"
+      ],
+      "M": [
+        "SHUIJING"
+      ]
+    }
+  }
+}

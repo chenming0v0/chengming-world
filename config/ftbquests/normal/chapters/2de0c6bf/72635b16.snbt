@@ -1,0 +1,15 @@
+{
+	x: -16.5d,
+	y: -0.5d,
+	shape: "diamond",
+	hide_dependency_lines: true,
+	dependencies: [
+		"c27af15b"
+	],
+	tasks: [{
+		uid: "43da2fff",
+		type: "kill",
+		entity: "legendera:devildom_lord",
+		value: 1L
+	}]
+}
