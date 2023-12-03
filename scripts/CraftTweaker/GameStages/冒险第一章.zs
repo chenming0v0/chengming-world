@@ -13,7 +13,6 @@ mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<contenttweaker:sh
 mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<contenttweaker:tian>);
 mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<contenttweaker:jiao_yue_zhi_bi_hu>);
 mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<contenttweaker:shi_lai_mu_yi_bian_jing_hua>);
-mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<ore:godshard>);
 mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<tconstruct:metal:3>);
 mods.ItemStages.addItemStage('\u5192\u9669\u7B2C\u4E00\u7AE0',<tconstruct:ingots:3>);
 
@@ -24,7 +23,8 @@ for item in loadedMods["defiledlands"].items{
     }
 }
 
-
+mods.DimensionStages.addDimensionStage("\u5192\u9669\u7b2c\u4e8c\u7ae0", 7);//暮色
+mods.DimensionStages.addDimensionStage("\u5192\u9669\u7b2c\u4e8c\u7ae0", 424);//极光幽境
 
 //冒险第一章怪物盔甲修改
 

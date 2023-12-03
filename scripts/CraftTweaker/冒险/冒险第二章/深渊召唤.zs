@@ -21,8 +21,13 @@ game.setLocalization("ac.ritual.testsummon.desc", "Testing MineTweaker Summoning
 mods.abyssalcraft.SummonRitual.addRitual("mo_jei_ling_zhu", 1, 1000, 7500, false, "legendera:devildom_lord", [<legendera:evilkind_power_core>, <legendera:soul_essence_3>, <legendera:evilkind_life_essence> , <legendera:devildom_amethyst>,<aether_legacy:enchanted_blueberry>, <legendera:devildom_amethyst>, <legendera:evilkind_life_essence> , <legendera:soul_essence_3>]); 
 
 game.setLocalization("ac.ritual.mo_jei_ling_zhu", "魔界领主仪式"); 
-game.setLocalization("ac.ritual.mo_jei_ling_zhu.desc", "用于召唤根本找不到的魔界领主");
+game.setLocalization("ac.ritual.mo_jei_ling_zhu.desc", "用于召唤根本找不到的魔界领主,要在魔界维度使用,并且魔界的基座要用深渊原石,不然是不会成型的,记得注意一下");
 
-mods.abyssalcraft.SummonRitual.addRitual("mo_jei_ling_zhu", 1, 50, 10000, false, "abyssalcraft:dragonboss", [<minecraft:enchanting_table>,<minecraft:ghast_tear>,<abyssalcraft:oc>,<forge:bucketfilled>.withTag({FluidName: "liquidcoralium", Amount: 1000}),<abyssalcraft:transmutationgem>,<forge:bucketfilled>.withTag({FluidName: "liquidcoralium", Amount: 1000}),<abyssalcraft:oc>,<minecraft:ghast_tear>]); 
-game.setLocalization("ac.ritual.mo_jei_ling_zhu", "沉睡者仪式"); 
-game.setLocalization("ac.ritual.mo_jei_ling_zhu.desc", "用于召唤那个黑暗领域的出生阿所拉,招来赶紧干死他,不知道什么原因导致看他翅膀会很卡注意一下");
+mods.abyssalcraft.Rituals.mapDimensionToBookTypeAndName(1000, 1, "魔界");
+
+mods.abyssalcraft.SummonRitual.addRitual("a_shuo_la", 1, 50, 10000, false, "abyssalcraft:dragonboss", [<minecraft:enchanting_table>,<minecraft:ghast_tear>,<abyssalcraft:oc>,<forge:bucketfilled>.withTag({FluidName: "liquidcoralium", Amount: 1000}),<abyssalcraft:transmutationgem>,<forge:bucketfilled>.withTag({FluidName: "liquidcoralium", Amount: 1000}),<abyssalcraft:oc>,<minecraft:ghast_tear>]); 
+game.setLocalization("ac.ritual.a_shuo_la", "沉睡者仪式"); 
+game.setLocalization("ac.ritual.a_shuo_la.desc", "用于召唤那个黑暗领域的出生阿索拉 \n 招出来赶紧干死他,不知道什么原因导致看他翅膀会很卡注意一下");
+
+//全部升级套件取消注册
+mods.abyssalcraft.UpgradeKit.removeAll();

@@ -7,6 +7,7 @@ mods.ItemStages.stageModItems("\u5730\u72F1", "netherex");
 
 val item as IItemStack[]= [
 <contenttweaker:jiao_yu_tiao_zhan_quan>,
+<rftools:dimensional_shard>,
 <contenttweaker:fen_shui_xia_jei_he_jin>,
 <minecraft:blaze_rod>,
 <minecraft:quartz_ore>,
@@ -59,6 +60,7 @@ val item as IItemStack[]= [
 <tconstruct:metal>,
 <tconstruct:metal:1>,
 <tconstruct:metal:2>,
+<minecraft:glowstone>,
 ];
 for i in item{
 mods.ItemStages.addItemStage('\u5730\u72F1',i);

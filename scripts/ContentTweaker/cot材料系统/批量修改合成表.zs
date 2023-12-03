@@ -1,3 +1,4 @@
+#ikwid
 #priority 20
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
@@ -49,7 +50,7 @@ for ench in oreDict.entries /* oreDict.entries 在所有注册OD中循环 */ {
             //3倍出碎块
             mods.mekanism.purification.addRecipe(ore, clump.firstItem * 3);
             //2倍出粉
-            mods.mekanism.enrichment.addRecipe(ore, dust.firstItem * 2);
+            mods.mekanism.enrichment.addRecipe(ore.firstItem, dust.firstItem * 2);
         }else{
             if( ! shard.empty && ! clump.empty && ! dirty_dust.empty ){
                 //倍矿基础
@@ -327,7 +328,7 @@ recipes.addShaped(<immersiveengineering:sheetmetal:10> * 2, [[<immersiveengineer
 recipes.addShaped(<immersiveengineering:sheetmetal:7> * 2, [[<immersiveengineering:material:8>, <ore:plateElectrum>, <immersiveengineering:material:8>], [<ore:plateElectrum>, null, <ore:plateElectrum>], [<immersiveengineering:material:8>, <ore:plateElectrum>, <immersiveengineering:material:8>]]);
 recipes.addShaped(<immersiveengineering:sheetmetal:6> * 2, [[<immersiveengineering:material:8>, <ore:plateConstantan>, <immersiveengineering:material:8>], [<ore:plateConstantan>, null, <ore:plateConstantan>], [<immersiveengineering:material:8>, <ore:plateConstantan>, <immersiveengineering:material:8>]]);
 recipes.addShaped(<immersiveengineering:sheetmetal:1> * 2, [[<immersiveengineering:material:8>, <ore:plateAluminum>, <immersiveengineering:material:8>], [<ore:plateAluminum>, null, <ore:plateAluminum>], [<immersiveengineering:material:8>, <ore:plateAluminum>, <immersiveengineering:material:8>]]);
-recipes.addShaped(<immersiveengineering:sheetmetal>, [[<immersiveengineering:material:8>, <ore:plateCopper>, <immersiveengineering:material:8>], [<ore:plateCopper>, null, <ore:plateCopper>], [<immersiveengineering:material:8>, <ore:plateCopper>, <immersiveengineering:material:8>]]);
+recipes.addShaped(<immersiveengineering:sheetmetal> * 2, [[<immersiveengineering:material:8>, <ore:plateCopper>, <immersiveengineering:material:8>], [<ore:plateCopper>, null, <ore:plateCopper>], [<immersiveengineering:material:8>, <ore:plateCopper>, <immersiveengineering:material:8>]]);
 
 mods.tconstruct.Casting.removeTableRecipe(<nuclearcraft:ingot:8>);
 mods.tconstruct.Melting.removeRecipe(<liquid:coal>);
@@ -337,5 +338,7 @@ mods.tconstruct.Casting.removeTableRecipe(<thermalfoundation:material:16>);
 mods.tconstruct.Casting.removeTableRecipe(<minecraft:diamond_block>);
 mods.tconstruct.Melting.removeRecipe(<liquid:diamond>);
 
+//为什么会有这样的合成表(铁 ——> 水)
+mods.tconstruct.Melting.removeRecipe(<liquid:water>, <minecraft:iron_ingot>);
 
-mods.tconstruct.Casting.addTableRecipe(<moretcon:repitem:5>, <twilightforest:steeleaf_ingot>, <liquid:liquidironwood>, 288, true);
+furnace.addRecipe(<aether_legacy:enchanted_gravitite>, <aether_legacy:gravitite_ore>, 3.7);

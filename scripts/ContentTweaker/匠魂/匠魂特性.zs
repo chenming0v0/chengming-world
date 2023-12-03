@@ -9,6 +9,7 @@ import crafttweaker.world.IWorld;
 import mods.contenttweaker.tconstruct.TraitBuilder;
 import crafttweaker.entity.IEntityLiving;
 import crafttweaker.entity.IEntityLivingBase;
+import mods.tconstruct.traits.OnToolDamage;
 
 if(true/*土块特性 tu_kuai*/){
     val tu_kuai = mods.contenttweaker.tconstruct.TraitBuilder.create("tu_kuai");
@@ -83,6 +84,38 @@ if(true/*暴怒特性 baonu*/){
     baonu.register();
 }
 
+if(true/*天地同源 huan_xie*/){
+    val huan_xie = mods.contenttweaker.tconstruct.TraitBuilder.create("huan_xie");
+    huan_xie.color = 0x99FFFF;
+    huan_xie.localizedName = ("天地同源");
+    huan_xie.localizedDescription = ("你应该信任我,将生命奉献给我,然后,我自然会向你展示,什么叫做力量 \n 当玩家最大生命值比怪物最大生命值低时，扣除一定百分比的血量，增加伤害");
+    huan_xie.addItem(<item:contenttweaker:tian>);
+    huan_xie.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical){
+        if (attacker.health >= attacker.maxHealth * 0.1f) {
+            if ( attacker.maxHealth <= target.maxHealth){        
+                attacker.health -= (target.maxHealth - attacker.maxHealth) * 0.3f;
+                return newDamage + (attacker.maxHealth + target.maxHealth) * 0.12f + 10.0f;
+            }
+        }return newDamage;
+    };
+    huan_xie.register();
+}
+
+if(true/*道德绑架退！退！退！ dao_de*/){
+    val dao_de = mods.contenttweaker.tconstruct.TraitBuilder.create("dao_de");
+    dao_de.color = 0x99FFFF;
+    dao_de.localizedName = ("道德绑架退！退！退！");
+    dao_de.localizedDescription = ("他还是个孩子！难度不能打的重亿点吗？");
+    dao_de.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical){
+        if (target.isChild == true ) {
+            return target.maxHealth * 2000 + newDamage;
+        }else{  
+            return newDamage;
+        }
+    };
+    dao_de.register();
+}
+
 if (true/*饱了特性 bao_le*/) {
     val bao_le = mods.contenttweaker.tconstruct.TraitBuilder.create("bao_le");
     bao_le.color = 0x99FFFF;
@@ -98,6 +131,31 @@ if (true/*饱了特性 bao_le*/) {
         }return newDamage;
     };
     bao_le.register();
+}
+
+if (true/*尖锐 jian_rui*/) {
+    val jian_rui = mods.contenttweaker.tconstruct.TraitBuilder.create("jian_rui");
+    jian_rui.color = 0x99FFFF;
+    jian_rui.maxLevel = 3;
+    jian_rui.localizedName = ("尖锐");
+    jian_rui.localizedDescription = ("玻璃真是夸张,这使得数值反复膨胀 \n 直接为工具增加20%的伤害!");
+    jian_rui.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical){
+    if(!attacker.world.remote){
+        return newDamage * 1.2f;
+    }return newDamage;
+    };
+    jian_rui.register();
+}
+
+if (true/*脆弱 cui_ruo*/) {
+    val cui_ruo = mods.contenttweaker.tconstruct.TraitBuilder.create("cui_ruo");
+    cui_ruo.color = 0x99FFFF;
+    cui_ruo.localizedName = ("脆弱");
+    cui_ruo.localizedDescription = ("凡事都是具有两面性的... \n 每一次攻击时额外扣除10!点耐久");
+    cui_ruo.onToolDamage = function(thisTrait, tool, damage, newDamage, entity) {
+        return newDamage + 10;
+    };
+    cui_ruo.register();
 }
 
 if (true/*噬魂者特性 shz*/) {
@@ -130,36 +188,6 @@ if (true/*噬魂者特性 shz*/) {
     shz.register();
 }
 
-if(true/*天地同源 huan_xie*/){
-    val huan_xie = mods.contenttweaker.tconstruct.TraitBuilder.create("huan_xie");
-    huan_xie.color = 0x99FFFF;
-    huan_xie.localizedName = ("天地同源");
-    huan_xie.localizedDescription = ("你应该信任我,将生命奉献给我,然后,我自然会向你展示,什么叫做力量 \n 当玩家最大生命值比怪物最大生命值低时，扣除一定百分比的血量，增加伤害");
-    huan_xie.addItem(<item:contenttweaker:tian>);
-    huan_xie.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical){
-        if (attacker.health >= attacker.maxHealth * 0.1f) {
-            if ( attacker.maxHealth <= target.maxHealth){        
-                attacker.health -= (target.maxHealth - attacker.maxHealth) * 0.3f;
-                return newDamage + (attacker.maxHealth + target.maxHealth) * 0.12f + 10.0f;
-            }
-        }return newDamage;
-    };
-    huan_xie.register();
-}
 
-if(true/*道德绑架退！退！退！ dao_de*/){
-    val dao_de = mods.contenttweaker.tconstruct.TraitBuilder.create("dao_de");
-    dao_de.color = 0x99FFFF;
-    dao_de.localizedName = ("道德绑架退！退！退！");
-    dao_de.localizedDescription = ("他还是个孩子！难度不能打的重亿点吗？");
-    dao_de.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical){
-        if (target.isChild == true ) {
-            return target.maxHealth * 2000 + newDamage;
-        }else{  
-            return newDamage;
-        }
-    };
-    dao_de.register();
-}
 //天地同源,生魂秉力
 //不解释又难受,解释又听起来特别像找借口

@@ -1,3 +1,4 @@
+#reloadable
 import crafttweaker.item.IItemStack;
 //史莱姆王
 val entity = <entity:null:king_slime>;

@@ -14,6 +14,7 @@ events.onPlayerRightClickItem(function(event as PlayerRightClickItemEvent) {
         if(<contenttweaker:jiao_yue_zhi_bi_hu>.matches(item)){
             val gamestage as string="gamestage add ";
             val stagename as string="地狱";
+            mods.contenttweaker.Commands.call("/scalinghealth difficulty add 40 @p", player, player.world, false, true);
             server.commandManager.executeCommand(server,gamestage + playerName + " " + stagename);
             item.mutable().shrink(1);
         }

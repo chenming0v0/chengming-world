@@ -45,6 +45,9 @@ val Part10 as string[]=["gear"];
 //有熔融全mek5倍
 val Part11 as string[]=["dust", "crystal", "shard","clump","dirty_dust","clean_ore_slurry_gas","dirty_ore_slurry_gas", "molten"];
 
+//天宇
+addMaterial("Tian" , 0x84e2f7, Part3);
+
 //压缩铁
 addMaterial("IronCompressed" , 0x363130, Part3);
 //Vibrant脉冲合金
@@ -207,7 +210,7 @@ if (true) {
     ];
 
     for i in 0 to 2{
-    addMaterial(tic_name_and_color[0][i], tic_name_and_color[1][i], Part5);
+    addMaterial(tic_name_and_color[0][i], tic_name_and_color[1][i], Part9);
     }
 
     //匠魂合金附加的矿石

@@ -2,6 +2,7 @@
 	icon: "legendera:devildom_portal_wand",
 	x: -12.0d,
 	y: -1.5d,
+	shape: "hexagon",
 	description: "前往魔界的必经之物",
 	text: [
 		"先停一停,如果没有合成的话,请小退一次,谢谢"

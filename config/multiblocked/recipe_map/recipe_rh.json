@@ -292,9 +292,7 @@
             "chance": 1.0,
             "content": {
               "amount": 4,
-              "matches": [
-                "{id:\"contenttweaker:te_hu_godshard\",Count:4,Damage:0s}"
-              ]
+              "ore": "godshard"
             }
           },
           {

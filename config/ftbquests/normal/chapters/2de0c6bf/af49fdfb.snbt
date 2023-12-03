@@ -7,6 +7,7 @@
 	tasks: [{
 		uid: "4fa63291",
 		type: "dimension",
+		title: "深渊荒原",
 		dim: 50
 	}]
 }

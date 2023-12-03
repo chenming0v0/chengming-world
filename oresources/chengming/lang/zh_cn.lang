@@ -69,10 +69,16 @@ szrl.name=§6神铸熔炉
 multiblocked.recipe_map.recipe_szrl=神熔之铸
 
 
-
+#cot匠魂材料流体
+fluid.rime_crystal=熔融下界霜晶
+fluid.dimensional_shard=熔融空间水晶
+fluid.ravaging=毁灭流质
 
 
 #cot材料系统
+#cot material
+base.material.tian=天宇
+
 #AbyssalCraft material
 base.material.abyssalnite=渊素
 

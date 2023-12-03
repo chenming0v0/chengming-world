@@ -5,7 +5,7 @@
 	description: "当你获得黑曜石的时候你就已经可以进入冒险第一章了",
 	text: [
 		"冒险第一章解锁后:",
-		"难度上升20",
+		"难度上升24",
 		"怪物穿上护甲",
 		"作者建议先搞套匠魂装备的铁套先"
 	],
@@ -28,8 +28,9 @@
 		uid: "04cd6f26",
 		type: "command",
 		title: "难度上升",
-		auto: "invisible",
-		command: "/scalinghealth difficulty add 20 @p"
+		team_reward: true,
+		auto: "no_toast",
+		command: "/scalinghealth difficulty add 24 @p"
 	},
 	{
 		uid: "46605f39",

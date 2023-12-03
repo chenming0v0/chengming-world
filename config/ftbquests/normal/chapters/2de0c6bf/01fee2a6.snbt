@@ -8,6 +8,7 @@
 	tasks: [{
 		uid: "1e9753b9",
 		type: "dimension",
+		title: "枢纽",
 		dim: 126
 	}]
 }
